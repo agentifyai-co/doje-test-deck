@@ -1,0 +1,27 @@
+{
+  "d5a6cf2c-32b4-454f-b802-4ac7bdf9977a": {
+    "default": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "cost": 0.0007979,
+        "mbIn": 0.06463,
+        "mbOut": 0.73327,
+        "pdf": "https://link-to-your-pdf.com/merged.pdf",
+        "success": true
+      }
+    },
+    "error": {
+      "status": 401,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "reason": "Unauthorized",
+        "success": false
+      }
+    }
+  }
+}

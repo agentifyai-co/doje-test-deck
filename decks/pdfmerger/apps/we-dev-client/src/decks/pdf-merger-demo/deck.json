@@ -1,0 +1,41 @@
+{
+      "id": "pdf-merger-demo",
+      "title": "PDF Merger Utility",
+      "version": "0.1.0",
+      "uiEntryPath": "apps/we-dev-client/src/decks/pdf-merger-demo/components/PdfMerger.tsx",
+      "endpoints": [
+        "d5a6cf2c-32b4-454f-b802-4ac7bdf9977a"
+      ],
+      "steps": [
+        {
+          "id": "mergePdfs",
+          "title": "Merge PDFs",
+          "inputs": [
+            {
+              "name": "apiKey",
+              "type": "string",
+              "label": "Api2Pdf Authorization Key",
+              "required": true
+            },
+            {
+              "name": "urls",
+              "type": "array",
+              "label": "PDF URLs to Merge",
+              "required": true
+            }
+          ],
+          "action": {
+            "endpointRef": "d5a6cf2c-32b4-454f-b802-4ac7bdf9977a",
+            "params": {
+              "header.Authorization": "input.apiKey",
+              "body.urls": "input.urls"
+            },
+            "mode": "live"
+          },
+          "output": {
+            "type": "json",
+            "select": "response"
+          }
+        }
+      ]
+    }

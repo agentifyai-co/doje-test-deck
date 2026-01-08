@@ -1,0 +1,2982 @@
+{
+  "version": 2,
+  "scopes": {
+    "691fb262a95b9b19e2500397::691548f5d144703317a4599e": {
+      "id": "root",
+      "name": "Third Collection",
+      "type": "folder",
+      "children": [
+        {
+          "id": "67684f28-19de-4bcc-9bbd-8bd3b31bccfb",
+          "type": "folder",
+          "name": "Crypto Wallet API (Demo)",
+          "children": [
+            {
+              "id": "9164106c-136d-48c7-92a5-4a23303d10b3",
+              "type": "folder",
+              "name": "Auth",
+              "children": [
+                {
+                  "id": "87bb7cc7-5946-43ef-bb9a-9be91379a5b6",
+                  "type": "api",
+                  "name": "Register user and create wallet",
+                  "method": "POST",
+                  "url": "https://crypto-wallet-server.mock.beeceptor.com/api/v1/register",
+                  "headers": [],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {
+                      "email": "satoshi@example.com",
+                      "password": "super-secure-password"
+                    }
+                  }
+                },
+                {
+                  "id": "c14e973e-6f81-4366-9f27-6a1e7ecc20c2",
+                  "type": "api",
+                  "name": "Login user and generate session token",
+                  "method": "POST",
+                  "url": "https://crypto-wallet-server.mock.beeceptor.com/api/v1/login",
+                  "headers": [],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {
+                      "email": "satoshi@example.com",
+                      "password": "super-secure-password"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "919c0245-a5a8-46e0-879b-4c51c7669317",
+              "type": "folder",
+              "name": "Wallet",
+              "children": [
+                {
+                  "id": "bb2e6dd7-174d-44f9-8e2a-73582ac1d9be",
+                  "type": "api",
+                  "name": "Retrieve wallet balance",
+                  "method": "GET",
+                  "url": "https://crypto-wallet-server.mock.beeceptor.com/api/v1/balance",
+                  "headers": [
+                    {
+                      "key": "Authorization",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "response": {
+                    "json": {
+                      "balance": 100.25,
+                      "currency": "BTC"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "f956bd45-ed44-4a25-8143-0add6b6ccc12",
+              "type": "folder",
+              "name": "Transactions",
+              "children": [
+                {
+                  "id": "f7f2f593-b324-440c-be87-4be81a7c4834",
+                  "type": "api",
+                  "name": "List all transactions for the user",
+                  "method": "GET",
+                  "url": "https://crypto-wallet-server.mock.beeceptor.com/api/v1/transactions",
+                  "headers": [
+                    {
+                      "key": "Authorization",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {}
+                },
+                {
+                  "id": "365f03e2-5523-436a-8323-6732b91e1ac6",
+                  "type": "api",
+                  "name": "Create a new transaction (e.g., transfer 5 ETH)",
+                  "method": "POST",
+                  "url": "https://crypto-wallet-server.mock.beeceptor.com/api/v1/transactions",
+                  "headers": [],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {
+                      "toAddress": "0x1234...abcd",
+                      "amount": 5,
+                      "currency": "ETH"
+                    }
+                  }
+                },
+                {
+                  "id": "beda8d60-cdf8-467d-bb7c-8c4066620cf2",
+                  "type": "api",
+                  "name": "Calculate estimated transaction fees",
+                  "method": "POST",
+                  "url": "https://crypto-wallet-server.mock.beeceptor.com/api/v1/transaction_fee",
+                  "headers": [],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {
+                      "amount": 5,
+                      "currency": "ETH"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "52135716-0e2b-4335-aaa9-759f85d78c35",
+              "type": "folder",
+              "name": "Rates",
+              "children": [
+                {
+                  "id": "5faee649-cfd8-4cee-a618-ee7674a4fa24",
+                  "type": "api",
+                  "name": "Get available currency exchange rates",
+                  "method": "GET",
+                  "url": "https://crypto-wallet-server.mock.beeceptor.com/api/v1/exchange_rates",
+                  "headers": [],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "b2ad2342-2bcc-418a-a474-e9b75c9d9a25",
+          "type": "folder",
+          "name": "They Said So Quotes API",
+          "children": [
+            {
+              "id": "ed6987a7-9e33-47ba-8a66-145d46aa8837",
+              "type": "folder",
+              "name": "Quote of the day",
+              "children": [
+                {
+                  "id": "748cebca-ef49-4a48-ba88-604393a4bb40",
+                  "type": "api",
+                  "name": "GET /qod",
+                  "method": "GET",
+                  "url": "https://quotes.rest/qod",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "key": "language",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/QuoteResponse"
+                      },
+                      "example": "{\n    \"success\": {\n        \"total\": 1\n    },\n    \"contents\": {\n        \"quotes\": [\n            {\n                \"quote\": \"Do not worry if you have built your castles in the air. They are where they should be. Now put the foundations under them.\",\n                \"length\": \"122\",\n                \"author\": \"Henry David Thoreau\",\n                \"tags\": [\n                    \"dreams\",\n                    \"inspire\",\n                    \"worry\"\n                ],\n                \"category\": \"inspire\",\n                \"date\": \"2016-11-21\",\n                \"title\": \"Inspiring Quote of the day\",\n                \"background\": \"https://theysaidso.com/img/bgs/man_on_the_mountain.jpg\",\n                \"id\": \"mYpH8syTM8rf8KFORoAJmQeF\"\n            }\n        ]\n    }\n}"
+                    },
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "<?xml version=\"1.0\"?> <response>\n  <success>\n    <total>1</total>\n  </success>\n  <contents>\n    <quotes>\n      <quote>Sometimes you climb out of bed in the morning and you think, I'm not going to make it, but you laugh inside &#x2014; remembering all the times you've felt that way.</quote>\n      <length>164</length>\n      <author>Charles Bukowski</author>\n      <tags>depression</tags>\n      <tags>inspire</tags>\n      <tags>tso-life</tags>\n      <category>inspire</category>\n      <date>2016-11-23</date>\n      <title>Inspiring Quote of the day</title>\n      <background>https://theysaidso.com/img/bgs/man_on_the_mountain.jpg</background>\n      <id>k7rTMtmveYHUN2ImwxNhhAeF</id>\n    </quotes>\n  </contents>\n</response>"
+                    },
+                    {
+                      "status": "400",
+                      "description": "400  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Bad Request: QOD category not supported for this category and language combination\"\n  }\n}               "
+                    }
+                  ]
+                },
+                {
+                  "id": "9a3927d2-0a3b-4beb-8684-9c521a90c02d",
+                  "type": "api",
+                  "name": "GET /qod/categories",
+                  "method": "GET",
+                  "url": "https://quotes.rest/qod/categories",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "language",
+                      "value": ""
+                    },
+                    {
+                      "key": "detailed",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"success\": {\n        \"total\": 8\n    },\n    \"contents\": {\n        \"categories\": {\n            \"inspire\": \"Inspiring Quote of the day\",\n            \"management\": \"Management Quote of the day\",\n            \"sports\": \"Sports Quote of the day\",\n            \"life\": \"Quote of the day about life\",\n            \"funny\": \"Funny Quote of the day\",\n            \"love\": \"Quote of the day about Love\",\n            \"art\": \"Art quote of the day \",\n            \"students\": \"Quote of the day for students\"\n        },\n        \"copyright\": \"2013-15 http://theysaidso.com\"\n    }\n}   "
+                    },
+                    {
+                      "status": "400",
+                      "description": "400  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"No QOD categories defined for this language.\"\n  }\n}                            "
+                    }
+                  ]
+                },
+                {
+                  "id": "6c86e24a-1d9d-42d9-a5e5-7574d1821c0d",
+                  "type": "api",
+                  "name": "GET /qod/languages",
+                  "method": "GET",
+                  "url": "https://quotes.rest/qod/languages",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 2\n  },\n  \"contents\": {\n    \"languages\": [\n      \"en\",\n      \"fr\",\n      \"ta\"\n    ]\n  },\n  \"baseurl\": \"https://theysaidso.com\",\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "a1e14fb3-138a-4002-b318-ec9e46673c5e",
+              "type": "folder",
+              "name": "Qshow",
+              "children": [
+                {
+                  "id": "9abc8680-438d-418b-876c-50050634155a",
+                  "type": "api",
+                  "name": "DELETE /qshow",
+                  "method": "DELETE",
+                  "url": "https://quotes.rest/qshow",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "{}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Qshow not found\"\n    }\n}                      "
+                    }
+                  ]
+                },
+                {
+                  "id": "b6791a89-f2a8-455f-817d-82f5c7360910",
+                  "type": "api",
+                  "name": "GET /qshow",
+                  "method": "GET",
+                  "url": "https://quotes.rest/qshow",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"success\": {\n        \"total\": 1\n    },\n    \"contents\": {\n        \"qshow\": {\n            \"title\": \"A tribute to Steve Jobs!\",\n            \"description\": \"A collection of great quotes from the master inventor Steve Jobs!\",\n            \"background\": \"https://theysaidso.com\",\n            \"language\": \"en\",\n            \"id\": \"CodzN7F_vU_URoHrPSUvDgeF\"\n        }\n    },\n    \"copyright\": {\n        \"year\": \"2016-18\",\n        \"url\": \"http://theysaidso.com\"\n    }\n}"
+                    },
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "<?xml version=\"1.0\"?> <response>\n  <success>\n    <total>1</total>\n  </success>\n  <contents>\n    <qshow>\n      <title>A tribute to Steve Jobs!</title>\n      <description>A collection of great quotes from the master inventor Steve Jobs!</description>\n      <background>https://theysaidso.com</background>\n      <language>en</language>\n      <id>CodzN7F_vU_URoHrPSUvDgeF</id>\n    </qshow>\n  </contents>\n  <copyright>\n    <year>2016-18</year>\n    <url>http://theysaidso.com</url>\n  </copyright>\n</response>"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Qshow not found\"\n    }\n}                 "
+                    }
+                  ]
+                },
+                {
+                  "id": "5ea2eab0-cfa9-42f2-8489-d2b55ea622f7",
+                  "type": "api",
+                  "name": "PATCH /qshow",
+                  "method": "PATCH",
+                  "url": "https://quotes.rest/qshow",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "title",
+                      "value": ""
+                    },
+                    {
+                      "key": "description",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n    \"quote\": {\n      \"id\": \"CodzN7F_vU_URoHrPSUvDgeF\"\n    }\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Qshow not found\"\n    }\n}                    "
+                    }
+                  ]
+                },
+                {
+                  "id": "fd4af978-56ca-45e3-bf46-410591ccce39",
+                  "type": "api",
+                  "name": "PUT /qshow",
+                  "method": "PUT",
+                  "url": "https://quotes.rest/qshow",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "title",
+                      "value": ""
+                    },
+                    {
+                      "key": "description",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n    \"quote\": {\n      \"id\": \"CodzN7F_vU_URoHrPSUvDgeF\"\n    }\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}              "
+                    }
+                  ]
+                },
+                {
+                  "id": "ad5a0885-f4dd-4d32-b7ec-90f205811448",
+                  "type": "api",
+                  "name": "GET /qshow/list",
+                  "method": "GET",
+                  "url": "https://quotes.rest/qshow/list",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": ""
+                    },
+                    {
+                      "key": "public",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"success\": {\n        \"total\": \"39\",\n        \"start\": 0,\n        \"limit\": 5\n    },\n    \"contents\": {\n        \"qshows\": [\n            {\n                \"title\": \"A tribute to Steve Jobs!\",\n                \"description\": \"A collection of great quotes from the master inventor Steve Jobs!\",\n                \"background\": \"/img/bgs/stevejobs.jpg\",\n                \"language\": \"en\",\n                \"id\": \"CodzN7F_vU_URoHrPSUvDgeF\"\n            },\n            {\n                \"title\": \"Celebrating Life!\",\n                \"description\": \"Eat, Sleep, Live your life!\",\n                \"background\": \"/img/slide-01.jpg\",\n                \"language\": \"en\",\n                \"id\": \"opDfpWwAD6lrfxdW_GBoVAeF\"\n            },\n            {\n                \"title\": \"Books \",\n                \"description\": \"Reading is the greatest pleasure for many! Here's to the bookies!\",\n                \"background\": \"/img/bgs/book.jpg\",\n                \"language\": \"en\",\n                \"id\": \"WMeCgo5WpiLk_qlbdAVyQweF\"\n            },\n            {\n                \"title\": \"Kids\",\n                \"description\": \"\",\n                \"background\": \"\",\n                \"language\": \"en\",\n                \"id\": \"sx9reMTiaGzXdt7lbVWntQeF\"\n            },\n            {\n                \"title\": \"Great quotes to live by\",\n                \"description\": \"Here are some powerful words of wisdom that inspire, educate and motivate a person to take action. \",\n                \"background\": \"/img/slide-03.jpg\",\n                \"language\": \"en\",\n                \"id\": \"k_kwBr7BKzxz3vLTQ6TWMQeF\"\n            }\n        ]\n    },\n    \"copyright\": {\n        \"year\": \"2016-18\",\n        \"url\": \"http://theysaidso.com\"\n    }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n} "
+                    }
+                  ]
+                },
+                {
+                  "id": "11f91338-eac9-4558-b269-4d602fc82fda",
+                  "type": "api",
+                  "name": "GET /qshow/quotes",
+                  "method": "GET",
+                  "url": "https://quotes.rest/qshow/quotes",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"success\": {\n        \"total\": 1\n    },\n    \"contents\": {\n        \"qshow\": {\n            \"title\": \"A tribute to Steve Jobs!\",\n            \"description\": \"A collection of great quotes from the master inventor Steve Jobs!\",\n            \"background\": \"https://theysaidso.com/img/bgs/stevejobs.jpg\",\n            \"language\": \"en\",\n            \"id\": \"CodzN7F_vU_URoHrPSUvDgeF\"\n        },\n        \"quotes\": [\n            {\n                \"quote\": \"A lot of people in our industry haven't had very diverse experiences. So they don't have enough dots to connect, and they end up with very linear solutions without a broad perspective on the problem. The broader one's understanding of the human experience, the better design we will have.\",\n                \"length\": \"288\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"design\",\n                    \"diversity\",\n                    \"experience\",\n                    \"linear-thinking\"\n                ],\n                \"id\": \"6HW5Uopw8VFLRKZEqGKDXQeF\"\n            },\n            {\n                \"quote\": \"Stay hungry. Stay foolish.\",\n                \"length\": \"26\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"inspirational\"\n                ],\n                \"id\": \"K__p_L1iMZtWulJ1SH4CogeF\"\n            },\n            {\n                \"quote\": \"Your time is limited, so don't waste it living someone else's life.\",\n                \"length\": \"67\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"life-and-living\",\n                    \"tso-life\"\n                ],\n                \"id\": \"mFjh_dNB_exJMHbyzRFIvQeF\"\n            },\n            {\n                \"quote\": \"If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it. And, like any great relationship, it just gets better and better as the years roll on.\",\n                \"length\": \"207\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"careers\",\n                    \"ideas\",\n                    \"ingenuity\",\n                    \"match\",\n                    \"passion\"\n                ],\n                \"id\": \"l3Cww1Bx7cYGlIpB_wZuOAeF\"\n            },\n            {\n                \"quote\": \"Details matter, it's worth waiting to get it right.\",\n                \"length\": \"51\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"apple\",\n                    \"ileadership\",\n                    \"jobs\",\n                    \"mac\",\n                    \"macintosh\",\n                    \"steve\"\n                ],\n                \"id\": \"A8gqJ6u2x3ZdUDU5VlnIxgeF\"\n            },\n            {\n                \"quote\": \"Be a yardstick of quality. Some people aren't used to an environment where excellence is expected.\",\n                \"length\": \"98\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"environment\",\n                    \"excellence\",\n                    \"people\",\n                    \"quality\"\n                ],\n                \"id\": \"rlqbJLNmDMPT_qkCpDBjEgeF\"\n            },\n            {\n                \"quote\": \"If you live each day as it was your last, someday you'll most certainly be right\",\n                \"length\": \"80\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"death\",\n                    \"rip\",\n                    \"steve\",\n                    \"tso-life\"\n                ],\n                \"id\": \"sBse0_uUemQD2l_qdL9BJgeF\"\n            },\n            {\n                \"quote\": \"Death is the destination we all share, no one has ever escaped it. And that is as it should be because death is very likely the single best invention of life.\",\n                \"length\": \"158\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"death\",\n                    \"destination\",\n                    \"invention\",\n                    \"life-and-death\",\n                    \"tso-life\"\n                ],\n                \"id\": \"LvjYLbdYzBOAqPPKfohvmQeF\"\n            },\n            {\n                \"quote\": \"Why join the navy if you can be a pirate?\",\n                \"length\": \"41\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"career\"\n                ],\n                \"id\": \"S6xVf_Nluid5r_0iO73ArQeF\"\n            },\n            {\n                \"quote\": \"One more thing...\",\n                \"length\": \"17\",\n                \"author\": \"Steve Jobs\",\n                \"tags\": [\n                    \"inspiration\"\n                ],\n                \"id\": \"X2QetehlwForyBZ5Nbp2YQeF\"\n            }\n        ]\n    },\n    \"copyright\": {\n        \"year\": \"2016-18\",\n        \"url\": \"http://theysaidso.com\"\n    }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Qshow not found\"\n    }\n}                      "
+                    }
+                  ]
+                },
+                {
+                  "id": "841c458e-c66d-48e8-84ec-a0173590b98d",
+                  "type": "api",
+                  "name": "POST /qshow/quotes/add",
+                  "method": "POST",
+                  "url": "https://quotes.rest/qshow/quotes/add",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "quoteid",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n    \"Quote added\"\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Qshow not found\"\n    }\n}                      "
+                    }
+                  ]
+                },
+                {
+                  "id": "1b7b6c53-bc5a-4b07-bcdb-87e39e541653",
+                  "type": "api",
+                  "name": "POST /qshow/quotes/remove",
+                  "method": "POST",
+                  "url": "https://quotes.rest/qshow/quotes/remove",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "quoteid",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n    \"Quote removed from Qshow\"\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Qshow not found\"\n    }\n}                      "
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "5ecfbc78-367d-48a2-8b21-108c4c542be9",
+              "type": "folder",
+              "name": "Private Quotes",
+              "children": [
+                {
+                  "id": "ad199c1e-2088-4bd0-a89d-0b385acdce7c",
+                  "type": "api",
+                  "name": "DELETE /quote",
+                  "method": "DELETE",
+                  "url": "https://quotes.rest/quote",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "{}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}                      "
+                    }
+                  ]
+                },
+                {
+                  "id": "078b3c10-8e0d-4ff4-8d17-d11948d1523c",
+                  "type": "api",
+                  "name": "PATCH /quote",
+                  "method": "PATCH",
+                  "url": "https://quotes.rest/quote",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "quote",
+                      "value": ""
+                    },
+                    {
+                      "key": "author",
+                      "value": ""
+                    },
+                    {
+                      "key": "language",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n    \"quote\": {\n      \"id\": \"0tztT1wYHRzdTf7jIccAzweF\"\n    }\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}              "
+                    }
+                  ]
+                },
+                {
+                  "id": "dffb8e1d-f166-489e-80cf-e1a8b9c63c99",
+                  "type": "api",
+                  "name": "POST /quote",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote",
+                      "value": ""
+                    },
+                    {
+                      "key": "author",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    },
+                    {
+                      "key": "language",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n    \"quote\": {\n      \"id\": \"0tztT1wYHRzdTf7jIccAzweF\"\n    }\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}              "
+                    }
+                  ]
+                },
+                {
+                  "id": "a126cddb-e30e-465d-b4dc-bf72d43989dc",
+                  "type": "api",
+                  "name": "PUT /quote",
+                  "method": "PUT",
+                  "url": "https://quotes.rest/quote",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote",
+                      "value": ""
+                    },
+                    {
+                      "key": "author",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    },
+                    {
+                      "key": "language",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n    \"quote\": {\n      \"id\": \"0tztT1wYHRzdTf7jIccAzweF\"\n    }\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}              "
+                    }
+                  ]
+                },
+                {
+                  "id": "f0761d86-bd9c-42e7-8ad3-e48906b11eef",
+                  "type": "api",
+                  "name": "GET /quote/list",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/list",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"success\": {\n        \"total\": \"263\",\n        \"range\": {\n            \"start\": 0,\n            \"end\": 5\n        }\n    },\n    \"contents\": {\n        \"quotes\": [\n            {\n                \"quote\": \"I think you should defend to the death their right to march, and then go down and meet them with baseball bats.\",\n                \"length\": \"111\",\n                \"author\": \"Woody Allen\",\n                \"tags\": [],\n                \"id\": \"GkeLUydBfiAH0Tcs2w_gwAeF\"\n            },\n            {\n                \"quote\": \"We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. ... The world will little note nor long remember what we say here, but it can never forget what they did here.\",\n                \"length\": \"310\",\n                \"author\": \"Abraham Lincoln\",\n                \"tags\": [],\n                \"id\": \"u6fD9eRFA2NFMHuEoeujaAeF\"\n            },\n            {\n                \"quote\": \"Eighty percent of success is showing up.\",\n                \"length\": \"40\",\n                \"author\": \"Woody Allen\",\n                \"tags\": [\n                    \"success\",\n                    \"tso-top-100\"\n                ],\n                \"id\": \"nLvp0vLfofW06PILxmERHgeF\"\n            },\n            {\n                \"quote\": \"Great ambition is the passion of a great character.  Those endowed with it may perform very good or very bad acts.  All depends on the principals which direct them.\",\n                \"length\": \"164\",\n                \"author\": \"Napoleon Bonaparte\",\n                \"tags\": [\n                    \"ambition\",\n                    \"inspire\",\n                    \"passion\"\n                ],\n                \"id\": \"X8juAoTtvxSEdgA0sGbYeQeF\"\n            },\n            {\n                \"quote\": \"I have had dreams, and I have had nightmares. I overcame the nightmares because of my dreams.\",\n                \"length\": \"93\",\n                \"author\": \"Dr. Jonas Salk\",\n                \"tags\": [\n                    \"dream\",\n                    \"nightmare\"\n                ],\n                \"id\": \"m_6Fj8QcXlVsQiiW7SAMLAeF\"\n            }\n        ]\n    }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n} "
+                    }
+                  ]
+                },
+                {
+                  "id": "24bad01b-3c9a-4d5d-865c-2c264941d0e4",
+                  "type": "api",
+                  "name": "POST /quote/tags/add",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/tags/add",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"message\": \"Tags added\"\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}                      "
+                    }
+                  ]
+                },
+                {
+                  "id": "65aaba73-1b81-412c-968e-9fdfc2e926ec",
+                  "type": "api",
+                  "name": "POST /quote/tags/remove",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/tags/remove",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"success\": {\n        \"total\": 1\n    },\n    \"contents\": {\n        \"message\": \"Tags removed.\"\n    }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "a348f7f9-df29-4c9b-a01e-633702bd7528",
+              "type": "folder",
+              "name": "Quote",
+              "children": [
+                {
+                  "id": "631496ac-d6ee-4e93-a218-da6a10abdb5e",
+                  "type": "api",
+                  "name": "GET /quote",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/QuoteResponse"
+                      },
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"quote\": \"The day soldiers stop bringing you their problems is the day you have stopped leading them. They have either lost confidence that you can help them or concluded that you do not care. Either case is a failure of leadership.\",\n    \"author\": \"Colin Powell\",\n    \"id\": \"XLa1AmylKv1XF_dXcyhvdweF\",\n    \"language\": \"en\",\n    \"sfw\": \"sfw\",\n    \"permalink\": \"https://theysaidso.com/quote/colin-powell-the-day-soldiers-stop-bringing-you-their-problems-is-the-day-you-ha\",\n    \"requested_category\": \"inspire\",\n    \"categories\": [\n      \"confidence\",\n      \"leadership\",\n      \"management\",\n      \"tod\"\n    ]\n  }\n}"
+                    },
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "<?xml version=\"1.0\"?> <response>\n  <success>\n    <total>1</total>\n  </success>\n  <contents>\n    <quotes>\n      <quote>Sometimes you climb out of bed in the morning and you think, I'm not going to make it, but you laugh inside &#x2014; remembering all the times you've felt that way.</quote>\n      <length>164</length>\n      <author>Charles Bukowski</author>\n      <tags>depression</tags>\n      <tags>inspire</tags>\n      <tags>tso-life</tags>\n      <category>inspire</category>\n      <date>2016-11-23</date>\n      <title>Inspiring Quote of the day</title>\n      <background>https://theysaidso.com/img/bgs/man_on_the_mountain.jpg</background>\n      <id>k7rTMtmveYHUN2ImwxNhhAeF</id>\n    </quotes>\n  </contents>\n</response>        "
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "a1859a97-0d05-43b0-b55e-7b6c1d0ffee1",
+                  "type": "api",
+                  "name": "GET /quote/authors/popular",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/authors/popular",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "language",
+                      "value": ""
+                    },
+                    {
+                      "key": "detailed",
+                      "value": ""
+                    },
+                    {
+                      "key": "start",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": \"2646\",\n    \"range\": {\n      \"start\": 0,\n      \"end\": 5\n    }\n  },\n  \"contents\": {\n    \"authors\": [\n      {\n        \"name\": \"Robert Louis Stevenson\",\n        \"slug\": \"robert-louis-stevenson\",\n        \"occupation\": \"Author\",\n        \"born\": \"1850-11-13 00:00:00\",\n        \"dead\": \"1894-12-03 00:00:00\",\n        \"description\": null,\n        \"id\": \"_kobR6QdDXDw_HCo2J_n0AeF\"\n      },\n      {\n        \"name\": \"Steve Jobs\",\n        \"slug\": \"steve-jobs\",\n        \"occupation\": \"Business\",\n        \"born\": \"1955-02-24 00:00:00\",\n        \"dead\": \"2011-10-05 00:00:00\",\n        \"description\": \"\",\n        \"id\": \"WKCl3utqIPYnCXiZubNNKAeF\"\n      },\n      {\n        \"name\": \"Steve Maraboli\",\n        \"slug\": \"steve-maraboli\",\n        \"occupation\": null,\n        \"born\": null,\n        \"dead\": null,\n        \"description\": null,\n        \"id\": \"GfOeOBX2Gwp1emdunDiXDweF\"\n      },\n      {\n        \"name\": \"Steven Wright\",\n        \"slug\": \"steven-wright\",\n        \"occupation\": \"Comic\",\n        \"born\": \"1955-12-06 00:00:00\",\n        \"dead\": null,\n        \"description\": null,\n        \"id\": \"j144PP_Pew72rXVrRKAmgAeF\"\n      },\n      {\n        \"name\": \"Wallace Stevens\",\n        \"slug\": \"wallace-stevens\",\n        \"occupation\": \"Poet\",\n        \"born\": \"1879-10-02 00:00:00\",\n        \"dead\": \"1955-08-02 00:00:00\",\n        \"description\": null,\n        \"id\": \"IF8HZp3hHsP_BzepN65atQeF\"\n      }\n    ],\n    \"matched_query\": \"steve\"\n  },\n  \"baseurl\": \"https://theysaidso.com\",\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "400",
+                      "description": "400  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Bad Request: Author details retrieval options are not supported for this user (please upgrade your subscription)\"\n  }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "5264abe1-1a13-4e96-b4df-6f854bac0b6b",
+                  "type": "api",
+                  "name": "GET /quote/authors/search",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/authors/search",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": ""
+                    },
+                    {
+                      "key": "language",
+                      "value": ""
+                    },
+                    {
+                      "key": "detailed",
+                      "value": ""
+                    },
+                    {
+                      "key": "start",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": \"2646\",\n    \"range\": {\n      \"start\": 0,\n      \"end\": 5\n    }\n  },\n  \"contents\": {\n    \"authors\": [\n      {\n        \"name\": \"Robert Louis Stevenson\",\n        \"slug\": \"robert-louis-stevenson\",\n        \"occupation\": \"Author\",\n        \"born\": \"1850-11-13 00:00:00\",\n        \"dead\": \"1894-12-03 00:00:00\",\n        \"description\": null,\n        \"id\": \"_kobR6QdDXDw_HCo2J_n0AeF\"\n      },\n      {\n        \"name\": \"Steve Jobs\",\n        \"slug\": \"steve-jobs\",\n        \"occupation\": \"Business\",\n        \"born\": \"1955-02-24 00:00:00\",\n        \"dead\": \"2011-10-05 00:00:00\",\n        \"description\": \"\",\n        \"id\": \"WKCl3utqIPYnCXiZubNNKAeF\"\n      },\n      {\n        \"name\": \"Steve Maraboli\",\n        \"slug\": \"steve-maraboli\",\n        \"occupation\": null,\n        \"born\": null,\n        \"dead\": null,\n        \"description\": null,\n        \"id\": \"GfOeOBX2Gwp1emdunDiXDweF\"\n      },\n      {\n        \"name\": \"Steven Wright\",\n        \"slug\": \"steven-wright\",\n        \"occupation\": \"Comic\",\n        \"born\": \"1955-12-06 00:00:00\",\n        \"dead\": null,\n        \"description\": null,\n        \"id\": \"j144PP_Pew72rXVrRKAmgAeF\"\n      },\n      {\n        \"name\": \"Wallace Stevens\",\n        \"slug\": \"wallace-stevens\",\n        \"occupation\": \"Poet\",\n        \"born\": \"1879-10-02 00:00:00\",\n        \"dead\": \"1955-08-02 00:00:00\",\n        \"description\": null,\n        \"id\": \"IF8HZp3hHsP_BzepN65atQeF\"\n      }\n    ],\n    \"matched_query\": \"steve\"\n  },\n  \"baseurl\": \"https://theysaidso.com\",\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "400",
+                      "description": "400  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Bad Request: Author details retrieval options are not supported for this user (please upgrade your subscription)\"\n  }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "afd63095-f9d5-4476-92ae-046d63baf4cf",
+                  "type": "api",
+                  "name": "GET /quote/categories/popular",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/categories/popular",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 18,\n    \"range\": {\n      \"start\": 0,\n      \"end\": 5\n    }\n  },\n  \"contents\": {\n    \"categories\": [\n      {\n        \"name\": \"inspirational\",\n        \"title\": \"Inspirational Quotes\"\n      },\n      {\n        \"name\": \"work\",\n        \"title\": null\n      },\n      {\n        \"name\": \"women\",\n        \"title\": null\n      },\n      {\n        \"name\": \"people\",\n        \"title\": null\n      },\n      {\n        \"name\": \"death\",\n        \"title\": null\n      }\n    ]\n  },\n  \"baseurl\": \"https://theysaidso.com\",\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}               "
+                    }
+                  ]
+                },
+                {
+                  "id": "9ebaf768-36dd-45c2-bf1a-4eec3b71790a",
+                  "type": "api",
+                  "name": "GET /quote/categories/search",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/categories/search",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": ""
+                    },
+                    {
+                      "key": "start",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 34,\n    \"range\": {\n      \"start\": 0,\n      \"end\": 5\n    }\n  },\n  \"contents\": {\n    \"categories\": [\n      {\n        \"name\": \"inspire\",\n        \"title\": null\n      },\n      {\n        \"name\": \"inspired\",\n        \"title\": null\n      },\n      {\n        \"name\": \"words-to-inspire-you\",\n        \"title\": null\n      },\n      {\n        \"name\": \"self-inspired\",\n        \"title\": null\n      },\n      {\n        \"name\": \"inspire-the-world\",\n        \"title\": null\n      }\n    ]\n  },\n  \"baseurl\": \"https://theysaidso.com\",\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "3773e19c-774c-4f88-b2af-94ae785732be",
+                  "type": "api",
+                  "name": "DELETE /quote/dislike",
+                  "method": "DELETE",
+                  "url": "https://quotes.rest/quote/dislike",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote_id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": \"Like / Dislike removed from quote.\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}                       "
+                    }
+                  ]
+                },
+                {
+                  "id": "ba69a655-373f-40db-9623-8a7ce931cf32",
+                  "type": "api",
+                  "name": "POST /quote/dislike",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/dislike",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote_id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": \"Disliked the quote\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "56faffb3-0dd3-4efd-8eb2-ac2c8fc72ebf",
+                  "type": "api",
+                  "name": "PUT /quote/dislike",
+                  "method": "PUT",
+                  "url": "https://quotes.rest/quote/dislike",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote_id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": \"Disliked the quote\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "0a11aa48-128b-44a8-946e-363060f8d42a",
+                  "type": "api",
+                  "name": "DELETE /quote/like",
+                  "method": "DELETE",
+                  "url": "https://quotes.rest/quote/like",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote_id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": \"Like / Dislike removed from quote.\"\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "416805b0-2f2e-4e3b-b109-af78bc3fcddb",
+                  "type": "api",
+                  "name": "POST /quote/like",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/like",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote_id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"message\": \"Like added to the quote\"\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "0590fe9d-554b-4c1d-9dbb-7a24745613de",
+                  "type": "api",
+                  "name": "PUT /quote/like",
+                  "method": "PUT",
+                  "url": "https://quotes.rest/quote/like",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote_id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"message\": \"Like added to the quote\"\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "21a40905-13e3-4ab7-81e2-f7a1b2b1a7ba",
+                  "type": "api",
+                  "name": "GET /quote/random",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/random",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "language",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/QuoteResponse"
+                      },
+                      "example": "{\n    \"success\": {\n        \"total\": 1\n    },\n    \"contents\": {\n        \"quotes\": [\n            {\n                \"quote\": \"The day soldiers stop bringing you their problems is the day you have stopped leading them. They have either lost confidence that you can help them or concluded that you do not care. Either case is a failure of leadership.\",\n                \"length\": \"222\",\n                \"author\": \"Colin Powell\",\n                \"tags\": [\n                    \"confidence\",\n                    \"leadership\",\n                    \"management\"\n                ],\n                \"category\": \"management\",\n                \"id\": \"XLa1AmylKv1XF_dXcyhvdweF\"\n            }\n        ]\n    }\n}"
+                    },
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "<?xml version=\"1.0\"?> <response>\n  <success>\n    <total>1</total>\n  </success>\n  <contents>\n    <quotes>\n      <quote>Sometimes you climb out of bed in the morning and you think, I'm not going to make it, but you laugh inside &#x2014; remembering all the times you've felt that way.</quote>\n      <length>164</length>\n      <author>Charles Bukowski</author>\n      <tags>depression</tags>\n      <tags>inspire</tags>\n      <tags>tso-life</tags>\n      <category>inspire</category>\n      <date>2016-11-23</date>\n      <title>Inspiring Quote of the day</title>\n      <background>https://theysaidso.com/img/bgs/man_on_the_mountain.jpg</background>\n      <id>k7rTMtmveYHUN2ImwxNhhAeF</id>\n    </quotes>\n  </contents>\n</response>      "
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "e970c564-0aab-4698-9faf-8f6d833aa5ed",
+                  "type": "api",
+                  "name": "GET /quote/search",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/search",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "key": "author",
+                      "value": ""
+                    },
+                    {
+                      "key": "minlength",
+                      "value": ""
+                    },
+                    {
+                      "key": "maxlength",
+                      "value": ""
+                    },
+                    {
+                      "key": "query",
+                      "value": ""
+                    },
+                    {
+                      "key": "private",
+                      "value": ""
+                    },
+                    {
+                      "key": "language",
+                      "value": ""
+                    },
+                    {
+                      "key": "limit",
+                      "value": ""
+                    },
+                    {
+                      "key": "sfw",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/QuoteResponse"
+                      },
+                      "example": "{\n    \"success\": {\n        \"total\": 1\n    },\n    \"contents\": {\n        \"quotes\": [\n            {\n                \"quote\": \"The day soldiers stop bringing you their problems is the day you have stopped leading them. They have either lost confidence that you can help them or concluded that you do not care. Either case is a failure of leadership.\",\n                \"length\": \"222\",\n                \"author\": \"Colin Powell\",\n                \"tags\": [\n                    \"confidence\",\n                    \"leadership\",\n                    \"management\"\n                ],\n                \"category\": \"management\",\n                \"id\": \"XLa1AmylKv1XF_dXcyhvdweF\"\n            }\n        ]\n    }\n}"
+                    },
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "<?xml version=\"1.0\"?> <response>\n  <success>\n    <total>1</total>\n  </success>\n  <contents>\n    <quotes>\n      <quote>Sometimes you climb out of bed in the morning and you think, I'm not going to make it, but you laugh inside &#x2014; remembering all the times you've felt that way.</quote>\n      <length>164</length>\n      <author>Charles Bukowski</author>\n      <tags>depression</tags>\n      <tags>inspire</tags>\n      <tags>tso-life</tags>\n      <category>inspire</category>\n      <date>2016-11-23</date>\n      <title>Inspiring Quote of the day</title>\n      <background>https://theysaidso.com/img/bgs/man_on_the_mountain.jpg</background>\n      <id>k7rTMtmveYHUN2ImwxNhhAeF</id>\n    </quotes>\n  </contents>\n</response>   "
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"No Quote found matching the search filters. Try with different search filters.\"\n    }\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "e2396031-87c4-455b-b7c6-89bf96f1aca5",
+              "type": "folder",
+              "name": "Quote Images",
+              "children": [
+                {
+                  "id": "424dab59-80e0-4657-a47b-e80704e5d70e",
+                  "type": "api",
+                  "name": "DELETE /quote/image",
+                  "method": "DELETE",
+                  "url": "https://quotes.rest/quote/image",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "{}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote not found\"\n    }\n}                      "
+                    }
+                  ]
+                },
+                {
+                  "id": "33b14138-9afd-4d9f-8431-e1446e9c1a0b",
+                  "type": "api",
+                  "name": "GET /quote/image",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/image",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "binary",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"qimage\": {\n      \"id\": \"75c3EoOmPVolqfB4KeUhXgeF\",\n      \"quote_id\": \"5e0QH_0k5srOUN1Wdu9AgweF\",\n      \"permalink\": \"https://theysaidso.com/i/75c3EoOmPVolqfB4KeUhXgeF\",\n      \"download_uri\": \"https://theysaidso.com/i/image/75c3EoOmPVolqfB4KeUhXgeF\"\n    }\n  },\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n} "
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote image not found\"\n    }\n}                       "
+                    }
+                  ]
+                },
+                {
+                  "id": "429616bc-9213-4abc-b8c8-a3e4b1bfbd2a",
+                  "type": "api",
+                  "name": "PUT /quote/image",
+                  "method": "PUT",
+                  "url": "https://quotes.rest/quote/image",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "quote_id",
+                      "value": ""
+                    },
+                    {
+                      "key": "bgimage_id",
+                      "value": ""
+                    },
+                    {
+                      "key": "bg_color",
+                      "value": ""
+                    },
+                    {
+                      "key": "font_id",
+                      "value": ""
+                    },
+                    {
+                      "key": "text_color",
+                      "value": ""
+                    },
+                    {
+                      "key": "text_size",
+                      "value": ""
+                    },
+                    {
+                      "key": "halign",
+                      "value": ""
+                    },
+                    {
+                      "key": "valign",
+                      "value": ""
+                    },
+                    {
+                      "key": "width",
+                      "value": ""
+                    },
+                    {
+                      "key": "height",
+                      "value": ""
+                    },
+                    {
+                      "key": "branding",
+                      "value": ""
+                    },
+                    {
+                      "key": "include_transparent_layer",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n      \"id\": \"75c3EoOmPVolqfB4KeUhXgeF\",\n  },\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n} "
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote image not found\"\n    }\n}                         "
+                    }
+                  ]
+                },
+                {
+                  "id": "79b355fd-020e-4147-852b-c95502bb99c3",
+                  "type": "api",
+                  "name": "DELETE /quote/image/background",
+                  "method": "DELETE",
+                  "url": "https://quotes.rest/quote/image/background",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": \"Resource Deleted\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Resource not found\"\n    }\n}                                          "
+                    }
+                  ]
+                },
+                {
+                  "id": "4fddf226-3946-4d42-9b32-f39bead1bf72",
+                  "type": "api",
+                  "name": "POST /quote/image/background",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/image/background",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "formData",
+                  "body": {
+                    "formData": []
+                  },
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n     \"id\" : \"afBLte5678bnzxc_iRbcg\"\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "c09ee6d7-2d68-4970-aa39-db281afa3edd",
+                  "type": "api",
+                  "name": "GET /quote/image/background/list",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/image/background/list",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"qimage\": {\n      \"id\": \"75c3EoOmPVolqfB4KeUhXgeF\",\n      \"quote_id\": \"5e0QH_0k5srOUN1Wdu9AgweF\",\n      \"permalink\": \"https://theysaidso.com/i/75c3EoOmPVolqfB4KeUhXgeF\",\n      \"download_uri\": \"https://theysaidso.com/i/image/75c3EoOmPVolqfB4KeUhXgeF\"\n    }\n  },\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}     "
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote image matching the query criteria not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "974cd787-8591-48bd-8c8b-a709490b0647",
+                  "type": "api",
+                  "name": "GET /quote/image/background/search",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/image/background/search",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"qimage\": {\n      \"id\": \"75c3EoOmPVolqfB4KeUhXgeF\",\n      \"quote_id\": \"5e0QH_0k5srOUN1Wdu9AgweF\",\n      \"permalink\": \"https://theysaidso.com/i/75c3EoOmPVolqfB4KeUhXgeF\",\n      \"download_uri\": \"https://theysaidso.com/i/image/75c3EoOmPVolqfB4KeUhXgeF\"\n    }\n  },\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}     "
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote image matching the query criteria not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "f5f5cdb8-db97-4a1e-abb5-78de3f093e6b",
+                  "type": "api",
+                  "name": "POST /quote/image/background/tags/add",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/image/background/tags/add",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Image not found\"\n    }\n}                      "
+                    }
+                  ]
+                },
+                {
+                  "id": "99b37729-e61c-43c9-b5cf-0b4e8c0a610c",
+                  "type": "api",
+                  "name": "POST /quote/image/background/tags/remove",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/image/background/tags/remove",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Image not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "757a64bc-1ba3-4eaa-8bef-c7e31025613b",
+                  "type": "api",
+                  "name": "DELETE /quote/image/font",
+                  "method": "DELETE",
+                  "url": "https://quotes.rest/quote/image/font",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/xml",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": \"Resource Deleted\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Resource not found\"\n    }\n}                                          "
+                    }
+                  ]
+                },
+                {
+                  "id": "a0c1b816-6aa5-49d6-9371-f4444c8d30d0",
+                  "type": "api",
+                  "name": "POST /quote/image/font",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/image/font",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "formData",
+                  "body": {
+                    "formData": []
+                  },
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"content\": {\n     \"id\" : \"afBLte5678bnzxc_iRbcg\"\n  }\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "aa38741e-036a-4272-97cc-0b50ffef498e",
+                  "type": "api",
+                  "name": "GET /quote/image/font/list",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/image/font/list",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"qimage\": {\n      \"id\": \"75c3EoOmPVolqfB4KeUhXgeF\",\n      \"quote_id\": \"5e0QH_0k5srOUN1Wdu9AgweF\",\n      \"permalink\": \"https://theysaidso.com/i/75c3EoOmPVolqfB4KeUhXgeF\",\n      \"download_uri\": \"https://theysaidso.com/i/image/75c3EoOmPVolqfB4KeUhXgeF\"\n    }\n  },\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}     "
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote image matching the query criteria not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "4035993a-7800-4417-b8cc-a2006124302a",
+                  "type": "api",
+                  "name": "GET /quote/image/font/search",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/image/font/search",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"qimage\": {\n      \"id\": \"75c3EoOmPVolqfB4KeUhXgeF\",\n      \"quote_id\": \"5e0QH_0k5srOUN1Wdu9AgweF\",\n      \"permalink\": \"https://theysaidso.com/i/75c3EoOmPVolqfB4KeUhXgeF\",\n      \"download_uri\": \"https://theysaidso.com/i/image/75c3EoOmPVolqfB4KeUhXgeF\"\n    }\n  },\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}     "
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote image matching the query criteria not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "71ada815-34d6-49df-bd07-46e4c44b9cea",
+                  "type": "api",
+                  "name": "POST /quote/image/font/tags/add",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/image/font/tags/add",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: font not found\"\n    }\n}                      "
+                    }
+                  ]
+                },
+                {
+                  "id": "cac7f4bf-c5dc-42e3-8de6-21dd2f006f56",
+                  "type": "api",
+                  "name": "POST /quote/image/font/tags/remove",
+                  "method": "POST",
+                  "url": "https://quotes.rest/quote/image/font/tags/remove",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "key": "tags",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}"
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Font not found\"\n    }\n}"
+                    }
+                  ]
+                },
+                {
+                  "id": "56dbaaa7-4d96-427e-9d93-e64dda24aa60",
+                  "type": "api",
+                  "name": "GET /quote/image/search",
+                  "method": "GET",
+                  "url": "https://quotes.rest/quote/image/search",
+                  "headers": [
+                    {
+                      "key": "X-TheySaidSo-Api-Secret",
+                      "value": ""
+                    }
+                  ],
+                  "query": [
+                    {
+                      "key": "category",
+                      "value": ""
+                    },
+                    {
+                      "key": "author",
+                      "value": ""
+                    },
+                    {
+                      "key": "private",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "200  response",
+                      "contentType": "application/json",
+                      "example": "{\n  \"success\": {\n    \"total\": 1\n  },\n  \"contents\": {\n    \"qimage\": {\n      \"id\": \"75c3EoOmPVolqfB4KeUhXgeF\",\n      \"quote_id\": \"5e0QH_0k5srOUN1Wdu9AgweF\",\n      \"permalink\": \"https://theysaidso.com/i/75c3EoOmPVolqfB4KeUhXgeF\",\n      \"download_uri\": \"https://theysaidso.com/i/image/75c3EoOmPVolqfB4KeUhXgeF\"\n    }\n  },\n  \"copyright\": \"2019-22 https://theysaidso.com\"\n}"
+                    },
+                    {
+                      "status": "401",
+                      "description": "401  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 401,\n        \"message\": \"Unauthorized\"\n    }\n}     "
+                    },
+                    {
+                      "status": "404",
+                      "description": "404  response",
+                      "contentType": "application/json",
+                      "example": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"Not Found: Quote image matching the query criteria not found\"\n    }\n}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "738563f9-99d0-442f-80f9-a2d29bb2b73f",
+          "type": "folder",
+          "name": "Api2Pdf - PDF Generation, Powered by AWS Lambda",
+          "children": [
+            {
+              "id": "a17d0c2a-09a7-4dde-8870-8e45e8819b25",
+              "type": "folder",
+              "name": "Headless Chrome",
+              "children": [
+                {
+                  "id": "ca75593b-4b86-4378-8977-7cc206906c52",
+                  "type": "api",
+                  "name": "Convert raw HTML to PDF",
+                  "method": "POST",
+                  "url": "https://v2018.api2pdf.com/chrome/html",
+                  "headers": [
+                    {
+                      "key": "Authorization",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {}
+                  },
+                  "requestSchema": {
+                    "$ref": "#/components/schemas/ChromeHtmlToPdfRequest"
+                  },
+                  "requestExample": {
+                    "fileName": "test.pdf",
+                    "html": "<p>Hello World</p>",
+                    "inlinePdf": true,
+                    "options": {
+                      "landscape": "true",
+                      "printBackground": false
+                    }
+                  },
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "A JSON object containing the url to the PDF and other meta data",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseSuccess"
+                      },
+                      "example": {
+                        "cost": 0.0007979,
+                        "mbIn": 0.06463,
+                        "mbOut": 0.73327,
+                        "pdf": "https://link-to-your-pdf",
+                        "success": true
+                      }
+                    },
+                    {
+                      "status": "401",
+                      "description": "Failed to generate PDF",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseFailure"
+                      },
+                      "example": {
+                        "reason": "Source website could not be found",
+                        "success": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "6f96a625-2912-4580-93e9-d46620b5eb81",
+                  "type": "api",
+                  "name": "Convert URL to PDF",
+                  "method": "GET",
+                  "url": "https://v2018.api2pdf.com/chrome/url",
+                  "headers": [],
+                  "query": [
+                    {
+                      "key": "url",
+                      "value": "https://instagram.com"
+                    },
+                    {
+                      "key": "output",
+                      "value": ""
+                    },
+                    {
+                      "key": "apikey",
+                      "value": "fe834019-98bb-4b31-bb03-6215f7669a51"
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "A PDF file or a JSON object depending on the `output` query parameter",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseSuccess"
+                      },
+                      "example": {
+                        "cost": 0.0007979,
+                        "mbIn": 0.06463,
+                        "mbOut": 0.73327,
+                        "pdf": "https://link-to-your-pdf",
+                        "success": true
+                      }
+                    },
+                    {
+                      "status": "200",
+                      "description": "A PDF file or a JSON object depending on the `output` query parameter",
+                      "contentType": "application/pdf",
+                      "schema": {
+                        "format": "binary",
+                        "type": "string"
+                      },
+                      "example": "string"
+                    },
+                    {
+                      "status": "401",
+                      "description": "Failed to generate PDF",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseFailure"
+                      },
+                      "example": {
+                        "reason": "Source website could not be found",
+                        "success": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "f4e54483-4afd-427e-af09-d8700360b2d7",
+                  "type": "api",
+                  "name": "Convert URL to PDF",
+                  "method": "POST",
+                  "url": "https://v2018.api2pdf.com/chrome/url",
+                  "headers": [
+                    {
+                      "key": "Authorization",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {}
+                  },
+                  "requestSchema": {
+                    "$ref": "#/components/schemas/ChromeUrlToPdfRequest"
+                  },
+                  "requestExample": {
+                    "fileName": "test.pdf",
+                    "inlinePdf": true,
+                    "options": {
+                      "landscape": "true",
+                      "printBackground": false
+                    },
+                    "url": "https://www.github.com"
+                  },
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "A JSON object containing the url to the PDF and other meta data",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseSuccess"
+                      },
+                      "example": {
+                        "cost": 0.0007979,
+                        "mbIn": 0.06463,
+                        "mbOut": 0.73327,
+                        "pdf": "https://link-to-your-pdf",
+                        "success": true
+                      }
+                    },
+                    {
+                      "status": "401",
+                      "description": "Failed to generate PDF",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseFailure"
+                      },
+                      "example": {
+                        "reason": "Source website could not be found",
+                        "success": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "055124b8-5072-41b1-aaa3-37d4a86bd66e",
+              "type": "folder",
+              "name": "LibreOffice",
+              "children": [
+                {
+                  "id": "5fc10a29-c92b-41cd-b75f-7958f5392a4a",
+                  "type": "api",
+                  "name": "Convert office document or image to PDF",
+                  "method": "POST",
+                  "url": "https://v2018.api2pdf.com/libreoffice/convert",
+                  "headers": [
+                    {
+                      "key": "Authorization",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {}
+                  },
+                  "requestSchema": {
+                    "$ref": "#/components/schemas/LibreOfficeConvertRequest"
+                  },
+                  "requestExample": {
+                    "fileName": "test.pdf",
+                    "inlinePdf": true,
+                    "url": "https://www.api2pdf.com/wp-content/themes/api2pdf/assets/samples/sample-word-doc.docx"
+                  },
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "A JSON object containing the url to the PDF and other meta data",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseSuccess"
+                      },
+                      "example": {
+                        "cost": 0.0007979,
+                        "mbIn": 0.06463,
+                        "mbOut": 0.73327,
+                        "pdf": "https://link-to-your-pdf",
+                        "success": true
+                      }
+                    },
+                    {
+                      "status": "401",
+                      "description": "Failed to generate PDF",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseFailure"
+                      },
+                      "example": {
+                        "reason": "Source website could not be found",
+                        "success": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "a3e24170-8164-4eb0-a5b6-fa37ee596d03",
+              "type": "folder",
+              "name": "Merge / Combine Pdfs",
+              "children": [
+                {
+                  "id": "d5a6cf2c-32b4-454f-b802-4ac7bdf9977a",
+                  "type": "api",
+                  "name": "Merge multiple PDFs together",
+                  "method": "POST",
+                  "url": "https://v2018.api2pdf.com/merge",
+                  "headers": [
+                    {
+                      "key": "Authorization",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {}
+                  },
+                  "requestSchema": {
+                    "$ref": "#/components/schemas/MergeRequest"
+                  },
+                  "requestExample": {
+                    "fileName": "test.pdf",
+                    "inlinePdf": true,
+                    "urls": [
+                      "link-to-pdf1",
+                      "link-to-pdf2",
+                      "link-to-pdf3"
+                    ]
+                  },
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "A JSON object containing the url to the PDF and other meta data",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseSuccess"
+                      },
+                      "example": {
+                        "cost": 0.0007979,
+                        "mbIn": 0.06463,
+                        "mbOut": 0.73327,
+                        "pdf": "https://link-to-your-pdf",
+                        "success": true
+                      }
+                    },
+                    {
+                      "status": "401",
+                      "description": "Failed to generate PDF",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseFailure"
+                      },
+                      "example": {
+                        "reason": "Source website could not be found",
+                        "success": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "7c1e01c4-548a-4452-92db-2b40fecda7f7",
+              "type": "folder",
+              "name": "wkhtmltopdf",
+              "children": [
+                {
+                  "id": "c1f111fd-ebf6-45b4-a63e-d5d599b3cc77",
+                  "type": "api",
+                  "name": "Convert raw HTML to PDF",
+                  "method": "POST",
+                  "url": "https://v2018.api2pdf.com/wkhtmltopdf/html",
+                  "headers": [
+                    {
+                      "key": "Authorization",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {}
+                  },
+                  "requestSchema": {
+                    "$ref": "#/components/schemas/WkHtmlToPdfHtmlToPdfRequest"
+                  },
+                  "requestExample": {
+                    "fileName": "test.pdf",
+                    "html": "<p>Hello World</p>",
+                    "inlinePdf": true,
+                    "options": {
+                      "orientation": "landscape",
+                      "pageSize": "A4"
+                    }
+                  },
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "A JSON object containing the url to the PDF and other meta data",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseSuccess"
+                      },
+                      "example": {
+                        "cost": 0.0007979,
+                        "mbIn": 0.06463,
+                        "mbOut": 0.73327,
+                        "pdf": "https://link-to-your-pdf",
+                        "success": true
+                      }
+                    },
+                    {
+                      "status": "401",
+                      "description": "Failed to generate PDF",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseFailure"
+                      },
+                      "example": {
+                        "reason": "Source website could not be found",
+                        "success": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "58220076-427c-46b3-b42b-e55df60146eb",
+                  "type": "api",
+                  "name": "Convert URL to PDF",
+                  "method": "GET",
+                  "url": "https://v2018.api2pdf.com/wkhtmltopdf/url",
+                  "headers": [],
+                  "query": [
+                    {
+                      "key": "url",
+                      "value": ""
+                    },
+                    {
+                      "key": "output",
+                      "value": ""
+                    },
+                    {
+                      "key": "apikey",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "A PDF file or a JSON object depending on the `output` query parameter",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseSuccess"
+                      },
+                      "example": {
+                        "cost": 0.0007979,
+                        "mbIn": 0.06463,
+                        "mbOut": 0.73327,
+                        "pdf": "https://link-to-your-pdf",
+                        "success": true
+                      }
+                    },
+                    {
+                      "status": "200",
+                      "description": "A PDF file or a JSON object depending on the `output` query parameter",
+                      "contentType": "application/pdf",
+                      "schema": {
+                        "format": "binary",
+                        "type": "string"
+                      },
+                      "example": "string"
+                    },
+                    {
+                      "status": "401",
+                      "description": "Failed to generate PDF",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseFailure"
+                      },
+                      "example": {
+                        "reason": "Source website could not be found",
+                        "success": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "543f102d-8d33-4692-a166-1dda5419dc3e",
+                  "type": "api",
+                  "name": "Convert URL to PDF",
+                  "method": "POST",
+                  "url": "https://v2018.api2pdf.com/wkhtmltopdf/url",
+                  "headers": [
+                    {
+                      "key": "Authorization",
+                      "value": ""
+                    }
+                  ],
+                  "query": [],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "json",
+                  "body": {
+                    "json": {}
+                  },
+                  "requestSchema": {
+                    "$ref": "#/components/schemas/WkHtmlToPdfUrlToPdfRequest"
+                  },
+                  "requestExample": {
+                    "fileName": "test.pdf",
+                    "inlinePdf": true,
+                    "options": {
+                      "orientation": "landscape",
+                      "pageSize": "A4"
+                    },
+                    "url": "https://www.github.com"
+                  },
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "A JSON object containing the url to the PDF and other meta data",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseSuccess"
+                      },
+                      "example": {
+                        "cost": 0.0007979,
+                        "mbIn": 0.06463,
+                        "mbOut": 0.73327,
+                        "pdf": "https://link-to-your-pdf",
+                        "success": true
+                      }
+                    },
+                    {
+                      "status": "401",
+                      "description": "Failed to generate PDF",
+                      "contentType": "application/json",
+                      "schema": {
+                        "$ref": "#/components/schemas/ApiResponseFailure"
+                      },
+                      "example": {
+                        "reason": "Source website could not be found",
+                        "success": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "f947caa7-610b-4d22-8102-fd6eda842937",
+              "type": "folder",
+              "name": "ZXING (Zebra Crossing) Bar Codes",
+              "children": [
+                {
+                  "id": "29c6ddd7-a578-48d1-a296-9a6f150ac76f",
+                  "type": "api",
+                  "name": "Generate bar codes and QR codes with ZXING.",
+                  "method": "GET",
+                  "url": "https://v2018.api2pdf.com/zebra",
+                  "headers": [],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": ""
+                    },
+                    {
+                      "key": "value",
+                      "value": ""
+                    },
+                    {
+                      "key": "showlabel",
+                      "value": ""
+                    },
+                    {
+                      "key": "height",
+                      "value": ""
+                    },
+                    {
+                      "key": "width",
+                      "value": ""
+                    },
+                    {
+                      "key": "apikey",
+                      "value": ""
+                    }
+                  ],
+                  "cookies": [],
+                  "pathParams": [],
+                  "bodyType": "none",
+                  "body": {},
+                  "responses": [
+                    {
+                      "status": "200",
+                      "description": "An image of the generated barcode or QR code",
+                      "contentType": "image/png",
+                      "schema": {
+                        "format": "binary",
+                        "type": "string"
+                      },
+                      "example": "string"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
