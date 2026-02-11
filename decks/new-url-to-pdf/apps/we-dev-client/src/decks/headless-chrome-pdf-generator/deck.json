@@ -1,0 +1,37 @@
+{
+  "id": "headless-chrome-pdf-generator",
+  "title": "PDF Generation with Headless Chrome",
+  "description": "Use a headless Chrome instance to convert URLs or raw HTML into PDF documents via the api2pdf.com service.",
+  "version": "1.0.0",
+  "endpoints": [
+    "ca75593b-4b86-4378-8977-7cc206906c52",
+    "6f96a625-2912-4580-93e9-d46620b5eb81",
+    "f4e54483-4afd-427e-af09-d8700360b2d7"
+  ],
+  "steps": [
+    {
+      "id": "configure",
+      "title": "Configure API Key",
+      "description": "Get your API key from api2pdf.com and add it here. This key will be used for all subsequent API calls.",
+      "endpointRef": null
+    },
+    {
+      "id": "url-to-pdf-get",
+      "title": "Convert URL to PDF (GET)",
+      "description": "Provide a public URL to convert it into a PDF. This method uses a GET request with the API key in the query string.",
+      "endpointRef": "6f96a625-2912-4580-93e9-d46620b5eb81"
+    },
+    {
+      "id": "url-to-pdf-post",
+      "title": "Convert URL to PDF (POST)",
+      "description": "Provide a public URL to convert it into a PDF. This method uses a POST request with the API key in the Authorization header.",
+      "endpointRef": "f4e54483-4afd-427e-af09-d8700360b2d7"
+    },
+    {
+      "id": "html-to-pdf-post",
+      "title": "Convert HTML to PDF (POST)",
+      "description": "Provide raw HTML content to convert it into a PDF. This method uses a POST request with the API key in the Authorization header.",
+      "endpointRef": "ca75593b-4b86-4378-8977-7cc206906c52"
+    }
+  ]
+}
