@@ -1,0 +1,29 @@
+{
+      "id": "api2pdf-chrome-demo",
+      "title": "Api2Pdf Headless Chrome Demo",
+      "version": "0.1.0",
+      "uiEntryPath": "src/App.tsx",
+      "endpoints": [],
+      "steps": [
+        {
+          "id": "convertHtml",
+          "title": "Convert HTML to PDF",
+          "inputs": [
+            { "name": "html", "type": "textarea", "label": "HTML Content", "required": true },
+            { "name": "fileName", "type": "text", "label": "Output Filename", "required": false }
+          ],
+          "action": null,
+          "output": { "type": "json", "select": "response" }
+        },
+        {
+          "id": "convertUrl",
+          "title": "Convert URL to PDF",
+          "inputs": [
+            { "name": "url", "type": "text", "label": "Website URL", "required": true },
+            { "name": "fileName", "type": "text", "label": "Output Filename", "required": false }
+          ],
+          "action": null,
+          "output": { "type": "json", "select": "response" }
+        }
+      ]
+    }
